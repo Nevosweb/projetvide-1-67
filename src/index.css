@@ -1,0 +1,84 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for mobile category navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 43 38% 97%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 42 76% 60%;
+    --primary-foreground: 30 10% 15%;
+
+    --secondary: 85 33% 32%;
+    --secondary-foreground: 43 38% 97%;
+
+    --muted: 43 38% 90%;
+    --muted-foreground: 30 10% 35%;
+
+    --accent: 82 20% 85%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 43 38% 97%;
+
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 42 76% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  body {
+    @apply bg-cafe-blanc text-foreground font-lato;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair font-medium;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .button-primary {
+    @apply bg-cafe-ocre hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .button-secondary {
+    @apply bg-white border border-cafe-olive text-cafe-olive hover:bg-cafe-olive hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+}
